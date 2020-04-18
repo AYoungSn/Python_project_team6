@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <style>
     #weather {
+      float: left;
       background-color: lightgrey;
+      width: 344px;
+      padding: 28px 0 25px 32px;
     }
     #keyword {
       background: pink;
@@ -18,13 +21,13 @@
     <h1>날씨에 맞는 옷 추천</h1>
   </header>
   <div id="weather">
-    <h4>현재 날씨는 {{cel}}도 입니다.</h4>
-    </div>
-    <div id="keyword">
+    <h4>오늘의 날씨는 {{list[2]}} 입니다.</h4>
+  </div>
+  <div id="keyword">
+    <!--최저 온도: {{list[0]}}, 최고 온도: {{list[1]}}-->
+  </div>
+  <div id="fashion">
 
-    </div>
-    <div id="fashion">
-
-    </div>
+  </div>
 </body>
 </html>
