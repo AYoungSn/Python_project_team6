@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    url = 'https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EB%82%A0%EC%94%A8'
-    req = Request(url)
+    req = Request('https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EB%82%A0%EC%94%A8')
     page = urlopen(req)
     html = page.read()
     soup = bs4.BeautifulSoup(html, 'html5lib')
