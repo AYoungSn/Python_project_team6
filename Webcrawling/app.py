@@ -29,11 +29,13 @@ def hello():
     if list['cast_txt']=='맑음':
         img='sunny'
     elif list['cast_txt']=='구름많음':
-        img='sun_cloud'
+        img='clowdy'
     elif list['cast_txt'] == '흐림':
         img='cloud'
     elif list['cast_txt'] == '비':
-        img='rainy'
+        img='rain'
+    elif list['cast_txt'] == '번개':
+        img='lightning'
     list['image_file'] = img+'.png'
     print(list)
     return render_template("index.html", list=list)

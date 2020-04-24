@@ -7,16 +7,22 @@
     body{
       width:500px;
       margin:auto;
+      text-align:center;
     }
     .weather {
       float: left;
       background-color: lightgrey;
-      padding: 28px 0 25px 32px;
+      padding: 28px 0 25px 25px;
       margin:auto;
+      width:500px;
+    }
+    .w_img{
+      width:150px;
+      float:left;
     }
     .cast {
-      float: right;
-      width: 300px;
+      float: left;
+      padding: 0 0 0 40px
      }
     .keyword {
       background: pink;
@@ -36,7 +42,7 @@
   <div class="weather">
     <!-- <img ...> -->
     {% if True %}
-    <img src="{{url_for('static',filename=list['image_file'])}}" width="150px">
+    <img class="w_img" src="{{url_for('static',filename=list['image_file'])}}">
     {% endif %}
     <div class="cast">
       <div>체감 기온<h2>{{list['sensible']}}</h2></div>
