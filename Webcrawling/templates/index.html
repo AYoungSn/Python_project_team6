@@ -20,11 +20,14 @@
   <header>
     <h1>날씨에 맞는 옷 추천</h1>
   </header>
+  <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
+   'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
   <div id="weather">
-    <h4>오늘의 날씨는 {{list[2]}} 입니다.</h4>
+    <div>체감 기온<h2>{{list['sensible']}}</h2></div>
+    <h4><p>최저/최고</p>{{list['temperature']}}</h4>
   </div>
   <div id="keyword">
-    <!--최저 온도: {{list[0]}}, 최고 온도: {{list[1]}}-->
+
   </div>
   <div id="fashion">
 
