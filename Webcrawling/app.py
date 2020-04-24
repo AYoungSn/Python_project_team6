@@ -16,12 +16,25 @@ def hello():
 
     # 웹 크롤링 부분
     info_temp=soup.find('ul',class_='info_list').text.split('   ')
+    info_temp[0]=info_temp[0].strip().split(',')[0]
     info_temp[1]=info_temp[1].strip().split(' ')
     t=info_temp[1][0].split('/')
     for i in t:
         temperature.append(int(i[:-1]))
-    list={'cast_txt':info_temp[0].strip().split(',')[0], 'temperature': info_temp[1][0],
-          'min_t':temperature[0],'max_t': temperature[1], 'sensible':info_temp[1][2]}
+
+    list = {'cast_txt':info_temp[0], 'temperature': info_temp[1][0],
+          'min_t' : temperature[0],'max_t': temperature[1], 'sensible':info_temp[1][2],
+          'image_file' :''}
+    img=''
+    if list['cast_txt']=='맑음':
+        img='sunny'
+    elif list['cast_txt']=='구름많음':
+        img='sun_cloud'
+    elif list['cast_txt'] == '흐림':
+        img='cloud'
+    elif list['cast_txt'] == '비':
+        img='rainy'
+    list['image_file'] = img+'.png'
     print(list)
     return render_template("index.html", list=list)
 

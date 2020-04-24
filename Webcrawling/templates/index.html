@@ -4,14 +4,25 @@
   <title>fashion-weather</title>
   <meta charset="utf-8">
   <style>
-    #weather {
+    body{
+      width:500px;
+      margin:auto;
+    }
+    .weather {
       float: left;
       background-color: lightgrey;
-      width: 344px;
       padding: 28px 0 25px 32px;
+      margin:auto;
     }
-    #keyword {
+    .cast {
+      float: right;
+      width: 300px;
+     }
+    .keyword {
       background: pink;
+
+    }
+    .fashion{
 
     }
   </style>
@@ -22,14 +33,20 @@
   </header>
   <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
    'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
-  <div id="weather">
-    <div>체감 기온<h2>{{list['sensible']}}</h2></div>
-    <h4><p>최저/최고</p>{{list['temperature']}}</h4>
+  <div class="weather">
+    <!-- <img ...> -->
+    {% if True %}
+    <img src="{{url_for('static',filename=list['image_file'])}}" width="150px">
+    {% endif %}
+    <div class="cast">
+      <div>체감 기온<h2>{{list['sensible']}}</h2></div>
+      <h4><p>최저/최고</p>{{list['temperature']}}</h4>
+    </div>
   </div>
-  <div id="keyword">
+  <div class="keyword">
 
   </div>
-  <div id="fashion">
+  <div class="fashion">
 
   </div>
 </body>
