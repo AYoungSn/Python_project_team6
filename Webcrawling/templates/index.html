@@ -62,7 +62,7 @@
      }
   </style>-->
 
-
+<link rel="stylesheet" href="{{url_for('static', filename='temp.css')}}">
 </head>
 <body>
   <header>
@@ -70,7 +70,7 @@
   </header>
   <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
    'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
-  <link rel="stylesheet" href="{{url_for('static', filename='temp.css')}}">
+
   <div class="weather">
     <div class="w_box">
       {% if True %}
