@@ -16,7 +16,6 @@ def hello():
 
     # 웹 크롤링 부분
     info_temp=soup.find('ul',class_='info_list').text.split('   ')
-    print(info_temp)
     info_temp[1]=info_temp[1].strip().split(' ')
     t=info_temp[1][0].split('/')
     for i in t:
