@@ -7,31 +7,63 @@
     body{
       width:500px;
       margin:auto;
+    }
+    /* Style the header */
+    header{
       text-align:center;
     }
-    .weather {
-      float: left;
-      background-color: lightgrey;
-      padding: 28px 0 25px 25px;
+    .w_box {
       margin:auto;
-      width:500px;
+      width:400px;
     }
+    .w_box .cast{
+      float:center;
+     }
+    .weather {
+      float: center;
+      background-color: #f9f9f9;
+      margin:auto;
+      width:100%;
+      height: 175px;
+      border-color:#dedede;
+      border-style: dashed;
+      border-width: thin;
+      border-radius:15px;
+    }
+    small {
+      text-align:left;
+      font-family: 'Dotum';
+      padding-left:5px;
+    }
+    .sensible_txt{
+      font-family: Helvetica;
+      font-size: 56px;
+      margin-top: -20px;
+      margin-bottom:-10px;
+    }
+    .highlow_temp{
+      font-family: Helvetica;
+      font-size: 25px;
+      font-weight:250px;
+      margin-top: -15px;
+      padding-left:7px;
+    }
+    /* weather image css */
     .w_img{
+      display: inline-block;
       width:150px;
       float:left;
+      /*argin-left:30px;*/
     }
     .cast {
+      display: inline-block;
       float: left;
-      padding: 0 0 0 40px
+      padding: 0 0 0 40px;
      }
-    .keyword {
-      background: pink;
-
-    }
-    .fashion{
-
-    }
   </style>
+  <!--
+  <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+-->
 </head>
 <body>
   <header>
@@ -40,13 +72,16 @@
   <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
    'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
   <div class="weather">
-    <!-- <img ...> -->
-    {% if True %}
-    <img class="w_img" src="{{url_for('static',filename=list['image_file'])}}">
-    {% endif %}
-    <div class="cast">
-      <div>체감 기온<h2>{{list['sensible']}}</h2></div>
-      <h4><p>최저/최고</p>{{list['temperature']}}</h4>
+    <div class="w_box">
+      {% if True %}
+      <img class="w_img" src="{{url_for('static',filename=list['image_file'])}}">
+      {% endif %}
+      <div class="cast">
+        <p><small>체감온도</small>
+        <p class="sensible_txt">{{list['sensible']}}C</p></p>
+        <p><small>최저/최고기온</small>
+        <p class="highlow_temp">{{list['temperature']}}</p></p>
+      </div>
     </div>
   </div>
   <div class="keyword">
