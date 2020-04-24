@@ -29,7 +29,7 @@ def hello():
     if list['cast_txt']=='맑음':
         img='sunny'
     elif list['cast_txt']=='구름많음':
-        img='clowdy'
+        img='suncloud'
     elif list['cast_txt'] == '흐림':
         img='cloud'
     elif list['cast_txt'] == '비':
@@ -41,4 +41,4 @@ def hello():
     return render_template("index.html", list=list)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
