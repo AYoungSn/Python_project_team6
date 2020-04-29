@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fashion-weather</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet"
+      href="{{url_for('static', filename='temp.css')}}">
+  <style>
+.keyword{
+  border-radius: 15px;
+  margin-top:10px;
+  background-color:#efefef;
+  padding-left: 13px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+ul{
+  overflow: auto;
+  list-style: none;
+}
+li{
+  float:left;
+  display: block;
+  margin:3px;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  border-width: thin;
+  border-color:#999999;
+  border-style:dashed;
+  background: #f9f9f9;
+}
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Today's мода</h1>
+  </header>
+  <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
+   'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
+
+  <div class="weather">
+    <div class="w_box">
+      {% if True %}
+      <img class="w_img" src="{{url_for('static',filename=list['image_file'])}}">
+      {% endif %}
+      <div class="cast">
+        <p>
+          <small>체감온도</small>
+          <p class="sensible_txt">{{list['sensible']}}C</p>
+        </p>
+        <p>
+          <small>최저/최고기온</small>
+          <p class="highlow_temp">{{list['temperature']}}</p>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="keyword">
+    {% if list['sensible'][:-1]|float <5 %}
+    <ul class="list">
+      <li>야상</li>
+      <li>패딩</li>
+      <li>목도리</li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>5 and list['sensible'][:-1]|float<10 %}
+    <ul class="list">
+      <li>코트</li>
+      <li>가죽 자켓</li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>10 and list['sensible'][:-1]|float<15 %}
+    <ul class="list">
+      <li>트렌치 코트</li>
+      <li>청자켓</li>
+      <li>가디건</li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>15 and list['sensible'][:-1]|float<20 %}
+    <ul class="list">
+      <li>니트</li>
+      <li>후드티</li>
+      <li>맨투맨</li>
+      <li>청바지</li>
+      <li>원피스</li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+    <ul class="list">
+      <li>셔츠</li>
+      <li>슬랙스</li>
+      <li>면바지</li>
+      <li>슬로브티</li>
+    </ul>
+    {% else %}
+    <ul class="list">
+      <li>반바지</li>
+      <li>민소매</li>
+      <li>반팔</li>
+      <li>뷔스티에</li>
+    </ul>
+    {% endif %}
+  </div>
+  <div class="fashion">
+    <ul>
+      {% for i in range(0,len) %}
+        <li><img src={{search_list[i]}}></li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
