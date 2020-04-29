@@ -71,3 +71,11 @@ small {
   border-width: thin;
   background: #f9f9f9;
 }
+footer {
+    font-family: 'Dotum';
+    font-size: 10px;
+    padding: 5;
+    margin-left:10px;
+    color:#888888;
+    text-align:center;
+}
