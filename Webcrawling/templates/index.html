@@ -12,9 +12,7 @@
   margin-top:10px;
   margin-bottom:5px;
   background-color:#efefef;
-  padding-left: 13px;
-  padding-top:8px;
-  padding-bottom:8px;
+  padding:8px 13px 8px 13px;
 }
 ul{
   overflow: auto;
@@ -26,13 +24,16 @@ ul{
   margin:3px;
   text-align: center;
   padding: 5px 10px 5px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   border-width: thin;
-  border-color:#999999;
-  border-style:dashed;
-  background: #f9f9f9;
+  border-color:#bbbbbb;
+  border-style:solid;
+  background: rgba(0,0,0,0);
+  font-weight:bold;
+  font-family:Nanum Gothic, gothic;
+  color:#444444;
 }
-  </style>
+</style>
 </head>
 <body>
   <header>
@@ -63,27 +64,27 @@ ul{
       <li>야상</li>
       <li>패딩</li>
       <li>목도리</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+        </ul>
     {% elif list['sensible'][:-1]|float>5 and list['sensible'][:-1]|float<10 %}
     <ul class="list">
       <li>코트</li>
       <li>가죽 자켓</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+    </ul>
     {% elif list['sensible'][:-1]|float>10 and list['sensible'][:-1]|float<15 %}
     <ul class="list">
       <li>트렌치 코트</li>
       <li>청자켓</li>
       <li>가디건</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+    </ul>
     {% elif list['sensible'][:-1]|float>15 and list['sensible'][:-1]|float<20 %}
     <ul class="list">
       <li>니트</li>
@@ -91,30 +92,30 @@ ul{
       <li>맨투맨</li>
       <li>청바지</li>
       <li>원피스</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+    </ul>
     {% elif list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
     <ul class="list">
       <li>셔츠</li>
       <li>슬랙스</li>
       <li>면바지</li>
       <li>슬로브티</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+    </ul>
     {% else %}
     <ul class="list">
       <li>반바지</li>
       <li>민소매</li>
       <li>반팔</li>
       <li>뷔스티에</li>
-    </ul>
       <form onclick="windows.open()">
-        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+        <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">Click</button>
       </form>
+    </ul>
     {% endif %}
   </div>
   <div class="fashion">
