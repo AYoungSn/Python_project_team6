@@ -31,7 +31,6 @@ li{
   background: #f9f9f9;
 }
   </style>
-
 </head>
 <body>
   <header>
@@ -100,19 +99,26 @@ li{
   </div>
   <div class="fashion">
     {% if list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+    <ul>
        <li>
-         <!--<img scr="shirt_1.jpg" width="100" height="100" alt="셔츠">-->
          <img src="{{ url_for('static', filename='shirt_1.jpg') }}", width="100", height="100">
        </li>
+    </ul>
+    <ul>
        <li>
          <img src="{{ url_for('static', filename='slacks_1.jpg') }}", width="100", height="100">
        </li>
-       <li>
+    </ul>
+    <ul>
+      <li>
          <img src="{{ url_for('static', filename='sleeve_1.jpg') }}", width="100", height="100">
        </li>
-       <li>
+    </ul>
+    <ul>
+      <li>
          <img src="{{ url_for('static', filename='pants_1.jpg') }}", width="100", height="100">
        </li>
+    </ul>
     {% endif %}
   </div>
 </body>
