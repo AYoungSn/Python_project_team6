@@ -18,7 +18,7 @@ ul{
   overflow: auto;
   list-style: none;
 }
-li{
+.list > li{
   float:left;
   display: block;
   margin:3px;
@@ -31,7 +31,6 @@ li{
   background: #f9f9f9;
 }
   </style>
-
 </head>
 <body>
   <header>
@@ -39,7 +38,6 @@ li{
   </header>
   <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
    'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
-
   <div class="weather">
     <div class="w_box">
       {% if True %}
@@ -100,6 +98,28 @@ li{
     {% endif %}
   </div>
   <div class="fashion">
+    {% if list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='shirt_1.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='slacks_1.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='sleeve_1.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='pants_1.jpg') }}">
+       </li>
+    </ul>
+    {% endif %}
   </div>
 </body>
 </html>
