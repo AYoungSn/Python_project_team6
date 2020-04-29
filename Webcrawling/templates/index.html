@@ -10,6 +10,7 @@
 .keyword{
   border-radius: 15px;
   margin-top:10px;
+  margin-bottom:5px;
   background-color:#efefef;
   padding-left: 13px;
   padding-top:8px;
@@ -99,20 +100,63 @@ ul{
     {% endif %}
   </div>
   <div class="fashion">
-    {% if list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+    {% if list['sensible'][:-1]|float <5 %}
     <ul>
        <li>
-         <img class="f_img" src="{{ url_for('static', filename='shirt_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='nocturnal_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='nocturnal_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='nocturnal_3.jpg') }}">
        </li>
     </ul>
     <ul>
        <li>
-         <img class="f_img" src="{{ url_for('static', filename='slacks_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='pading_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='pading_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='pading_3.jpg') }}">
        </li>
     </ul>
     <ul>
       <li>
-         <img class="f_img" src="{{ url_for('static', filename='sleeve_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='muffler_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='muffler_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='muffler_3.jpg') }}">
+       </li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>5 and list['sensible'][:-1]|float<10 %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='coat_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='coat_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='coat_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='jacket_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='jacket_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='jacket_3.jpg') }}">
+       </li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>10 and list['sensible'][:-1]|float<15 %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='trench_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='trench_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='trench_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='denim_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='denim_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='denim_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='cardgan_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='cardgan_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='cardgan_3.jpg') }}">
        </li>
     </ul>
     <ul>
@@ -120,7 +164,105 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='pants_1.jpg') }}">
        </li>
     </ul>
+    {% elif list['sensible'][:-1]|float>15 and list['sensible'][:-1]|float<20 %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='neat_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='neat_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='neat_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='hoodie_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='hoodie_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='hoodie_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='man_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='man_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='man_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='jeans_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='jeans_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='jeans_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='onepiece_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='onepiece_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='onepiece_3.jpg') }}">
+       </li>
+    </ul>
+    {% elif list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='shirt_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shirt_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shirt_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='slacks_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='slacks_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='slacks_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='sleeve_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='sleeve_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='sleeve_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='pants_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='pants_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='pants_3.jpg') }}">
+       </li>
+    </ul>
+    {% else %}
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='shortpants_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shortpants_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shortpants_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+       <li>
+         <img class="f_img" src="{{ url_for('static', filename='sleeveless_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='sleeveless_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='sleeveless_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='shortsleeve_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shortsleeve_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='shortsleeve_3.jpg') }}">
+       </li>
+    </ul>
+    <ul>
+      <li>
+         <img class="f_img" src="{{ url_for('static', filename='bustier_1.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='bustier_2.jpg') }}">
+         <img class="f_img" src="{{ url_for('static', filename='bustier_3.jpg') }}">
+       </li>
+    </ul>
+
     {% endif %}
   </div>
+<footer>
+    <p>2020.04 SungShin Women University. Computer Network Projects. Ahn Youngseon, Lee Soyoon, Lee Jieum</p>
+</footer>
 </body>
 </html>
