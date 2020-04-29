@@ -39,7 +39,6 @@ li{
   </header>
   <!-- list={'cast_txt': '맑음', 'temperature': '3˚/16˚',
    'min_t': 3, 'max_t': 16, 'sensible': '13.8˚'} -->
-
   <div class="weather">
     <div class="w_box">
       {% if True %}
@@ -100,6 +99,21 @@ li{
     {% endif %}
   </div>
   <div class="fashion">
+    {% if list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
+       <li>
+         <!--<img scr="shirt_1.jpg" width="100" height="100" alt="셔츠">-->
+         <img src="{{ url_for('static', filename='shirt_1.jpg') }}", width="100", height="100">
+       </li>
+       <li>
+         <img src="{{ url_for('static', filename='slacks_1.jpg') }}", width="100", height="100">
+       </li>
+       <li>
+         <img src="{{ url_for('static', filename='sleeve_1.jpg') }}", width="100", height="100">
+       </li>
+       <li>
+         <img src="{{ url_for('static', filename='pants_1.jpg') }}", width="100", height="100">
+       </li>
+    {% endif %}
   </div>
 </body>
 </html>
