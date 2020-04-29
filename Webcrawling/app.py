@@ -55,30 +55,6 @@ def hello():
     return render_template("index.html", list=list)
 
 
-@app.route('/result', methods=['POST'])
-def searching():
-    # selenium을 이용한 크롤링을 위해 chromewebdriver 불러오기
-    driver = webdriver.Chrome('./chromedriver.exe')
-
-    # hello() 함수에서 정의한 sense를 이용해 온도에 따라 크롤링할 웹사이트의 주소를 바꾼다
-    global sense
-
-    if sense < 5:
-        driver.get('http://bitly.kr/zES72ShsC')
-    elif 5 < sense < 10:
-        driver.get('http://bitly.kr/l4Bjw90Tf')
-    elif 10 < sense < 15:
-        driver.get('http://bitly.kr/3La7rHmtW')
-    elif 15 < sense < 20:
-        driver.get('http://bitly.kr/d0M88P3XJ')
-    elif 20 < sense < 25:
-        driver.get('http://bitly.kr/UXCC726nfO')
-    else:
-        driver.get('http://bitly.kr/tQlnJsKme')
-
-    return render_template("result.html")
-
-
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', debug=True)
     app.run(debug=True)

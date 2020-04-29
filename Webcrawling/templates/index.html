@@ -122,6 +122,10 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='muffler_3.jpg') }}">
        </li>
     </ul>
+      <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+    </form>
+
     {% elif list['sensible'][:-1]|float>5 and list['sensible'][:-1]|float<10 %}
     <ul>
        <li>
@@ -137,6 +141,9 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='jacket_3.jpg') }}">
        </li>
     </ul>
+      <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+    </form>
     {% elif list['sensible'][:-1]|float>10 and list['sensible'][:-1]|float<15 %}
     <ul>
        <li>
@@ -164,6 +171,9 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='pants_1.jpg') }}">
        </li>
     </ul>
+      <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+      </form>
     {% elif list['sensible'][:-1]|float>15 and list['sensible'][:-1]|float<20 %}
     <ul>
        <li>
@@ -200,6 +210,9 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='onepiece_3.jpg') }}">
        </li>
     </ul>
+      <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+      </form>
     {% elif list['sensible'][:-1]|float>20 and list['sensible'][:-1]|float<25 %}
     <ul>
        <li>
@@ -229,6 +242,9 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='pants_3.jpg') }}">
        </li>
     </ul>
+      <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+      </form>
     {% else %}
     <ul>
        <li>
@@ -258,7 +274,9 @@ ul{
          <img class="f_img" src="{{ url_for('static', filename='bustier_3.jpg') }}">
        </li>
     </ul>
-
+    <form onclick="windows.open()">
+      <button onclick="window.open('https://swindow.naver.com/style/fashionbrand/list/category')">button</button>
+    </form>
     {% endif %}
   </div>
 <footer>
