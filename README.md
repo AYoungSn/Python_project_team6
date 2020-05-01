@@ -2,7 +2,7 @@
 컴네실 파이썬 프로젝트 6조
 
 ##### 설치할 모듈 목록 확인> requirements.txt
-<hr/>
+* * *
 ## Today's мода
 <img src="https://user-images.githubusercontent.com/46748334/80778035-0864ad80-8ba2-11ea-9e6b-ff5af222a903.png" width="50%"></img>
 
