@@ -2,26 +2,18 @@ from flask import Flask, render_template
 from urllib.request import urlopen, Request
 import bs4
 
-# import selenium
-from selenium import webdriver
-
 app = Flask(__name__)
-
-# sensible 변수를 search 함수에도 불러오기 위해 전역변수로 설정
-sense = 1
-
 
 @app.route('/')
 def hello():
     # Webpage html 읽어오는 코드
     url = 'https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%EB%82%A0%EC%94%A8'
-
     req = Request(url)
     page = urlopen(req)
     html = page.read()
     soup = bs4.BeautifulSoup(html, 'html5lib')
-    temperature = []
 
+    temperature = []
     # 웹 크롤링 부분
     info_temp = soup.find('ul', class_='info_list').text.split('   ')
     info_temp[0] = info_temp[0].strip().split(',')[0]
@@ -33,10 +25,6 @@ def hello():
     list = {'cast_txt': info_temp[0], 'temperature': info_temp[1][0],
             'min_t': temperature[0], 'max_t': temperature[1], 'sensible': info_temp[1][2],
             'image_file': ''}
-
-    # sense 변수 설정
-    global sense
-    sense = int(info_temp[1][2].split('.')[0])
 
     # 날씨에 맞는 이미지 로딩
     img = ''
@@ -53,7 +41,6 @@ def hello():
     list['image_file'] = img + '.png'
 
     return render_template("index.html", list=list)
-
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', debug=True)
